@@ -1,2 +1,0 @@
-# NodeEndpointExample
-Created with CodeSandbox
