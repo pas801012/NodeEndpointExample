@@ -1,10 +1,7 @@
 const http = require('http');
-// const fs = require('fs');
 
 var hGet = require('./modules/handleGet.js');
 var hPost = require('./modules/handlePost.js');
-
-// const JSONFILE = 'src/customers.json';
 
 //Create a http server
 http

@@ -1,3 +1,4 @@
+// THIS IS ORIGINAL EXAMPLE: NOT USED IN INDEX.JS
 const http = require('http');
 const fs = require('fs');
 
