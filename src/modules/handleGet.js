@@ -1,10 +1,11 @@
 var exports = (module.exports = {});
 var routes = require('./routes/routesGet.js');
+var helper = require('./helper.js');
 
 exports.handleGet = function(req, res) {
-  //get the url string from the request url
-  let url = req.url.split('?') ? req.url.split('?')[0] : req.url;
-  switch (url) {
+  let route = helper.parseRoute(req.url);
+
+  switch (route) {
     case '/help':
       routes.help(res);
       break;
