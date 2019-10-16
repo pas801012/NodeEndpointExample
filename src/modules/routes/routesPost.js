@@ -11,6 +11,8 @@ module.exports = {
     req.on('end', function() {
       // var POST = qs.parse(body);
       // console.log('postBody', POST);
+      res.write(body);
+      res.end();
       console.log('body', JSON.parse(body));
     });
 
