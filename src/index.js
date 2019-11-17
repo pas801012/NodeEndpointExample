@@ -7,6 +7,7 @@ var hPost = require('./modules/handlePost.js');
 http
   .createServer(function(req, res) {
     console.log(req.method, req.url);
+    res.setHeader('Access-Control-Allow-Origin', '*');
     switch (req.method) {
       case 'GET':
         hGet.handleGet(req, res);

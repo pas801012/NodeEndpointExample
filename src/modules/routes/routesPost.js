@@ -11,6 +11,22 @@ module.exports = {
     req.on('end', function() {
       // var POST = qs.parse(body);
       // console.log('postBody', POST);
+      res.write(body);
+      res.end();
+      console.log('user', req.body);
+      console.log('body', JSON.parse(body));
+    });
+  },
+  getUnDefault: function(req, res) {
+    var body = '';
+    req.on('data', function(data) {
+      body += data;
+    });
+    req.on('end', function() {
+      // var POST = qs.parse(body);
+      // console.log('postBody', POST);
+      res.write(body);
+      res.end();
       console.log('body', JSON.parse(body));
     });
 
